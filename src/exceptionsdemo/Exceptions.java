@@ -8,13 +8,17 @@ public class Exceptions {
      * if this wasn't just for practice.
      */
     public static void printElementOfArrayIfExists(String [] strs) {
+        String element = "";
         try {
-            String index = strs[2];
+            element = strs[1];
             // You can change the exception from Array to String to see it break
         } catch(ArrayIndexOutOfBoundsException e) {
             System.out.println("Out Of Bounds!!!");
         } finally {
-            System.out.println("Happens Every Time!!");
+            // System.out.println("Happens Every Time!!");
+            if(!element.equals("")) {
+                System.out.println(element);
+            }
         }
     }
     
