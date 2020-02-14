@@ -29,15 +29,14 @@ public class Exceptions {
      * of which index you want if this wasn't just for practice.
      */
     public static void printCharOfStringIfExists(String str) {
-        Character isReal = '\u0000';
+        Character myChar = '\u0000';
         try {
-            isReal = str.charAt(5);
-            System.out.println(isReal);
+            myChar = str.charAt(5);
         } catch(StringIndexOutOfBoundsException e) {
             System.out.println("String Out Of Bounds!!!");
         } finally {
-            if(isReal.equals('\u0000')) {
-                System.out.println(isReal);
+            if(!myChar.equals('\u0000')) {
+                System.out.println(myChar);
             }
         }
     }
